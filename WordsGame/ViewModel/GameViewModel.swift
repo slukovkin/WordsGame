@@ -88,7 +88,7 @@ class GameViewModel : ObservableObject {
             throw WordError.unknownError
         }
         
-        words.append(result)
+        words.insert(result, at: 0)
         
         if isFirstPlayer {
             self.playerOne.score += result.count

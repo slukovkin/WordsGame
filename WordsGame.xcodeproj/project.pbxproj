@@ -16,6 +16,7 @@
 		FA6720862BC614E20048EB8B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6720852BC614E20048EB8B /* GameView.swift */; };
 		FA7A1AC12BC85D4400DCA651 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1AC02BC85D4400DCA651 /* GameViewModel.swift */; };
 		FA7A1AC32BC85D6200DCA651 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A1AC22BC85D6200DCA651 /* Player.swift */; };
+		FA9F69DB2BCB1A3F0087EC14 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F69DA2BCB1A3F0087EC14 /* WordCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		FA6720852BC614E20048EB8B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FA7A1AC02BC85D4400DCA651 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		FA7A1AC22BC85D6200DCA651 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FA9F69DA2BCB1A3F0087EC14 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				FA6720802BC605F60048EB8B /* Components */,
 				FA6720742BC605570048EB8B /* StartView.swift */,
+				FA9F69DA2BCB1A3F0087EC14 /* WordCell.swift */,
 				FA6720852BC614E20048EB8B /* GameView.swift */,
 			);
 			path = Views;
@@ -189,6 +192,7 @@
 				FA6720732BC605570048EB8B /* WordsGameApp.swift in Sources */,
 				FA6720842BC611490048EB8B /* InputFieldView.swift in Sources */,
 				FA7A1AC32BC85D6200DCA651 /* Player.swift in Sources */,
+				FA9F69DB2BCB1A3F0087EC14 /* WordCell.swift in Sources */,
 				FA6720822BC606150048EB8B /* TitleView.swift in Sources */,
 				FA6720862BC614E20048EB8B /* GameView.swift in Sources */,
 			);
