@@ -22,7 +22,7 @@ struct StartView: View {
                 TitleView(text: "Words Game")
                     .padding(.bottom, 30)
                 
-                InputFieldView(someWord: $bigWord, placeholder: "Введите большое слово")
+                InputFieldView(someWord: $bigWord, placeholder: "Введите длинное слово")
                     .padding(.bottom, 30)
                 
                 InputFieldView(someWord: $player1, placeholder: "Введите первого игрока")
@@ -30,7 +30,9 @@ struct StartView: View {
                 InputFieldView(someWord: $player2, placeholder: "Введите второго игрока")
                 
                 Button {
-                    isShowGameScreen.toggle()
+                    if bigWord.count >= 7 {
+                        isShowGameScreen.toggle()
+                    }
                 } label: {
                     Text("Start")
                         .padding()
@@ -47,7 +49,7 @@ struct StartView: View {
             .fullScreenCover(isPresented: $isShowGameScreen) {
                 
                 let playerOne = Player(name: player1 == "" ? "Игрок 1": player1)
-                let playerTwo = Player(name: player2 == "" ? "Игрок 1": player2)
+                let playerTwo = Player(name: player2 == "" ? "Игрок 2": player2)
                 
                 let gemeViewModel = GameViewModel(playerOne: playerOne, playerTwo: playerTwo, word: bigWord)
                 

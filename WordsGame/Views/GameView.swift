@@ -53,7 +53,7 @@ struct GameView: View {
                        height: screen.width / 2.2)
                 .background(Color("FirstPlayer"))
                 .cornerRadius(12)
-                .shadow(color: .red, radius: 4, x: 0, y: 0)
+                .shadow(color: viewModel.isFirstPlayer ? .red: .clear, radius: 4, x: 0, y: 0)
                 
                 VStack {
                     Text("\(viewModel.playerTwo.score)")
@@ -67,7 +67,7 @@ struct GameView: View {
                 .frame(width: screen.width / 2.2, height: screen.width / 2.2)
                 .background(Color("SecondPlayer"))
                 .cornerRadius(12)
-                .shadow(color: .purple, radius: 4, x: 0, y: 0)
+                .shadow(color: viewModel.isFirstPlayer ? .clear: .purple, radius: 4, x: 0, y: 0)
                 
             }
             InputFieldView(someWord: $inputWord, placeholder: "Введите слово")
@@ -127,13 +127,13 @@ struct GameView: View {
                 Button(role: .destructive) {
                     self.dismiss()
                 } label: {
-                    Text("OK")
+                    Text("Да")
                 }
                 
                 Button(role: .cancel) {
                     //
                 } label: {
-                    Text("NO")
+                    Text("Нет")
                 }
             }
         
