@@ -14,11 +14,10 @@ struct TitleView: View {
     var body: some View {
         Text(text)
             .padding()
-            .font(.custom("AvenirNext-Bold", size: 42))
+            .font(.custom("AvenirNext-Bold", size: 36))
             .background(Color("FirstPlayer"))
             .cornerRadius(16)
             .foregroundColor(.white)
-            .frame(maxWidth: .infinity)
     }
 }
 

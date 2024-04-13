@@ -12,13 +12,14 @@ struct StartView: View {
     @State var bigWord = ""
     @State var player1 = ""
     @State var player2 = ""
+
     
     @State var isShowGameScreen = false
     
     var body: some View {
         ZStack {
             VStack {
-                TitleView(text: "Words Games")
+                TitleView(text: "Words Game")
                     .padding(.bottom, 30)
                 
                 InputFieldView(someWord: $bigWord, placeholder: "Введите большое слово")
@@ -33,18 +34,24 @@ struct StartView: View {
                 } label: {
                     Text("Start")
                         .padding()
-                        .frame(width: 310)
-                        .font(.custom("AvenirNext-Bold", size: 30))
+                        .frame(width: screen.width - 30)
+                        .font(.custom("AvenirNext-Bold", size: 24))
                         .foregroundColor(Color.white)
                         .background(Color("FirstPlayer"))
                         .cornerRadius(16)
                         .padding(.vertical)
                 }
-            
+                
             }
         } .background(Image("background"))
             .fullScreenCover(isPresented: $isShowGameScreen) {
-                GameView()
+                
+                let playerOne = Player(name: player1 == "" ? "Игрок 1": player1)
+                let playerTwo = Player(name: player2 == "" ? "Игрок 1": player2)
+                
+                let gemeViewModel = GameViewModel(playerOne: playerOne, playerTwo: playerTwo, word: bigWord)
+                
+                GameView(viewModel: gemeViewModel)
             }
     }
     

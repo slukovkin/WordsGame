@@ -18,6 +18,6 @@ struct InputFieldView: View {
             .font(.title2)
             .background(.white)
             .cornerRadius(16)
-            .padding(.horizontal, 32)
+            .padding(.horizontal)
     }
 }
